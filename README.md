@@ -3,6 +3,8 @@ TensorFlow is an end-to-end open source platform for machine learning. It has a 
 
 ## Equation
 
+![chart](https://i.imgur.com/kb0Nac9.jpg)
+
 * y = 2x-1 
 * example: x = 20, then y = 39
 * tf.tensor2d([20], [1, 1]) = 39
