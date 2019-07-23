@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.11.2"></script>
+    </head>
+    <body>
+        <div id="output_field"></div>
+    </body>
+    <script>
+    async function learnLinear(){
+        // Define a model for linear regression.
+        const model = tf.sequential();
+        model.add( tf.layers.dense( {units: 1, inputShape: 2} ) );
+
+        // Prepare the model for training: Specify the loss and the optimizer.
+        model.compile({
+            loss: 'meanSquaredError',
+            optimizer: 'sgd'
+        });
+
+        // Generate some synthetic data for training.
+        const xs = tf.tensor([[1, 1], [2, 2], [3, 3], [1, 2], [2, 3], [3, 4], [4, 5]], [7, 2]);
+        const ys = tf.tensor2d([2, 4, 6, 3, 5, 7, 9], [7, 1]);
+
+        // // Train the model using the data.
+        await model.fit(xs, ys, {epochs: 3000});
+        // // Use the model to do inference on a data point the model hasn't seen before:
+        document.getElementById('output_field').innerText = model.predict( tf.tensor2d([2, 7], [1, 2]) );
+    }
+    learnLinear(); 
+    </script>
+</html>  
