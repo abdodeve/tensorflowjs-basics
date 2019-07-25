@@ -1,0 +1,23 @@
+{
+  "name": "tensorflowjs_demo",
+  "version": "1.0.0",
+  "description": "TensorFlow is an end-to-end open source platform for machine learning. It has a comprehensive, flexible ecosystem of tools, libraries and community resources that lets researchers push the state-of-the-art in ML and developers easily build and deploy ML powered applications.",
+  "main": "save_model.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abdodeve/tensorflowjs-basics.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abdodeve/tensorflowjs-basics/issues"
+  },
+  "homepage": "https://github.com/abdodeve/tensorflowjs-basics#readme",
+  "dependencies": {
+    "@tensorflow/tfjs": "^1.2.5",
+    "@tensorflow/tfjs-node": "^1.2.4"
+  }
+}
